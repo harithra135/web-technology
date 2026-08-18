@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Grade Calculator</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #eef6ff;
+            text-align: center;
+        }
+
+        .box {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background: white;
+            border: 2px solid #1565c0;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 7px;
+        }
+
+        button {
+            background-color: #1565c0;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0d47a1;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e3f2fd;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Student Grade Calculator</h1>
+
+        <input type="number"
+               id="mark1"
+               placeholder="Subject 1 Mark"
+               min="0"
+               max="100">
+
+        <input type="number"
+               id="mark2"
+               placeholder="Subject 2 Mark"
+               min="0"
+               max="100">
+
+        <input type="number"
+               id="mark3"
+               placeholder="Subject 3 Mark"
+               min="0"
+               max="100">
+
+        <input type="number"
+               id="mark4"
+               placeholder="Subject 4 Mark"
+               min="0"
+               max="100">
+
+        <input type="number"
+               id="mark5"
+               placeholder="Subject 5 Mark"
+               min="0"
+               max="100">
+
+        <br>
+
+        <button onclick="calculateGrade()">
+            Calculate Result
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <script>
+
+        // User-defined function
+        function calculateGrade() {
+
+            // Array to store marks
+            let marks = [];
+
+            // Iteration statement
+            for (let i = 1; i <= 5; i++) {
+
+                let mark =
+                    Number(
+                        document.getElementById("mark" + i).value
+                    );
+
+                marks.push(mark);
+            }
+
+
+            // Calculate total
+            let total = 0;
+
+            for (let mark of marks) {
+                total = total + mark;
+            }
+
+
+            // Calculate average
+            let average = total / 5;
+
+
+            // Variable for grade
+            let grade;
+
+
+            // Selection statements
+            if (average >= 90) {
+
+                grade = "A+";
+
+            } else if (average >= 80) {
+
+                grade = "A";
+
+            } else if (average >= 70) {
+
+                grade = "B";
+
+            } else if (average >= 60) {
+
+                grade = "C";
+
+            } else if (average >= 50) {
+
+                grade = "D";
+
+            } else {
+
+                grade = "F";
+
+            }
+
+
+            // Pass or Fail
+            let status;
+
+            if (marks.every(mark => mark >= 40)) {
+
+                status = "PASS";
+
+            } else {
+
+                status = "FAIL";
+
+            }
+
+
+            // Display result
+            document.getElementById("result").innerHTML =
+
+                "<h2>Result</h2>" +
+
+                "<p><b>Total:</b> " +
+                total + " / 500</p>" +
+
+                "<p><b>Average:</b> " +
+                average.toFixed(2) + "</p>" +
+
+                "<p><b>Grade:</b> " +
+                grade + "</p>" +
+
+                "<p><b>Status:</b> " +
+                status + "</p>";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

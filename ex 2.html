@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Admission Form</title>
+
+    <style>
+
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #eef2ff;
+        }
+
+        /* Main Container */
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+
+            /* CSS Box Model */
+            border: 3px solid #4f46e5;
+            border-radius: 12px;
+
+            box-shadow: 0 4px 12px #c7d2fe;
+        }
+
+        /* Learn Beyond Logo */
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 180px;
+            height: auto;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            color: #3730a3;
+            margin-bottom: 25px;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Input Fields */
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        /* Focus Effect */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border: 2px solid #4f46e5;
+            outline: none;
+        }
+
+        /* Gender */
+        .gender {
+            display: flex;
+            gap: 20px;
+        }
+
+        .gender label {
+            font-weight: normal;
+        }
+
+        .gender input {
+            width: auto;
+        }
+
+        /* Buttons */
+        button {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 8px;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #312e81;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .gender {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- Learn Beyond Logo -->
+
+    <div class="logo">
+
+        <img src="logo.png"
+             alt="Learn Beyond Logo">
+
+    </div>
+
+
+    <!-- Form Heading -->
+
+    <h1>Student Admission Form</h1>
+
+
+    <form>
+
+        <!-- Full Name -->
+
+        <div class="form-group">
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your full name"
+                   required>
+
+        </div>
+
+
+        <!-- Email -->
+
+        <div class="form-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email"
+                   required>
+
+        </div>
+
+
+        <!-- Password -->
+
+        <div class="form-group">
+
+            <label for="password">
+                Password
+            </label>
+
+            <input type="password"
+                   id="password"
+                   placeholder="Enter password">
+
+        </div>
+
+
+        <!-- Phone Number -->
+
+        <div class="form-group">
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input type="tel"
+                   id="phone"
+                   placeholder="Enter phone number">
+
+        </div>
+
+
+        <!-- Date of Birth -->
+
+        <div class="form-group">
+
+            <label for="dob">
+                Date of Birth
+            </label>
+
+            <input type="date"
+                   id="dob">
+
+        </div>
+
+
+        <!-- Gender -->
+
+        <div class="form-group">
+
+            <label>
+                Gender
+            </label>
+
+            <div class="gender">
+
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           value="male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           value="female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           value="other">
+                    Other
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- Course -->
+
+        <div class="form-group">
+
+            <label for="course">
+                Select Course
+            </label>
+
+            <select id="course">
+
+                <option value="">
+                    Choose Course
+                </option>
+
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>Mechanical</option>
+                <option>Civil</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- 12th Percentage -->
+
+        <div class="form-group">
+
+            <label for="marks">
+                12th Percentage
+            </label>
+
+            <input type="number"
+                   id="marks"
+                   min="0"
+                   max="100"
+                   placeholder="Enter percentage">
+
+        </div>
+
+
+        <!-- Upload Photo -->
+
+        <div class="form-group">
+
+            <label for="photo">
+                Upload Photo
+            </label>
+
+            <input type="file"
+                   id="photo">
+
+        </div>
+
+
+        <!-- Address -->
+
+        <div class="form-group">
+
+            <label for="address">
+                Address
+            </label>
+
+            <textarea id="address"
+                      rows="5"
+                      placeholder="Enter your address"></textarea>
+
+        </div>
+
+
+        <!-- Terms and Conditions -->
+
+        <div class="form-group">
+
+            <label>
+
+                <input type="checkbox">
+
+                I agree to the admission
+                terms and conditions.
+
+            </label>
+
+        </div>
+
+
+        <!-- Buttons -->
+
+        <button type="submit">
+            Submit Application
+        </button>
+
+        <button type="reset">
+            Reset
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

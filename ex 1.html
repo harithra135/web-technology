@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technology Concepts</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        .diagram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .box {
+            background-color: #dbeafe;
+            border: 2px solid #2563eb;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .arrow {
+            font-size: 25px;
+            color: #2563eb;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #dbeafe;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #1e3a8a;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Fundamentals of the World Wide Web</h1>
+    <p>Basic Web Technology Concepts</p>
+</header>
+
+<section>
+    <h2>1. Internet Overview</h2>
+    <p>
+        The Internet is a worldwide network that connects millions of
+        computers and devices. It allows users to communicate, share
+        information and access online services.
+    </p>
+
+    <div class="diagram">
+        <div class="box">Computer</div>
+        <div class="arrow">→</div>
+        <div class="box">Router</div>
+        <div class="arrow">→</div>
+        <div class="box">Internet</div>
+        <div class="arrow">→</div>
+        <div class="box">Web Server</div>
+    </div>
+</section>
+
+<section>
+    <h2>2. Fundamental Computer Network Concepts</h2>
+
+    <ul>
+        <li><b>IP Address:</b> Identifies a device on a network.</li>
+        <li><b>Router:</b> Transfers data between different networks.</li>
+        <li><b>Protocol:</b> Rules used for communication.</li>
+        <li><b>HTTP/HTTPS:</b> Protocols used for web communication.</li>
+        <li><b>TCP/IP:</b> A collection of protocols used by the Internet.</li>
+        <li><b>DNS:</b> Converts domain names into IP addresses.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>3. URL and Its Structure</h2>
+
+    <p>A URL identifies the location of a resource on the Internet.</p>
+
+    <div class="box">
+        https://www.example.com/products/index.html
+    </div>
+
+    <ul>
+        <li><b>https:</b> Protocol</li>
+        <li><b>www:</b> Subdomain</li>
+        <li><b>example.com:</b> Domain name</li>
+        <li><b>/products/:</b> Directory</li>
+        <li><b>index.html:</b> Web page/file</li>
+    </ul>
+</section>
+
+<section>
+    <h2>4. Domain Name</h2>
+
+    <p>
+        A domain name is the human-readable name used to access a website.
+        For example, <b>google.com</b> is a domain name.
+    </p>
+
+    <div class="diagram">
+        <div class="box">www</div>
+        <div class="arrow">.</div>
+        <div class="box">example</div>
+        <div class="arrow">.</div>
+        <div class="box">com</div>
+    </div>
+</section>
+
+<section>
+    <h2>5. Web Browser and Web Server</h2>
+
+    <div class="diagram">
+        <div class="box">
+            Web Browser<br>
+            Chrome / Edge / Firefox
+        </div>
+
+        <div class="arrow">⇄</div>
+
+        <div class="box">
+            Web Server<br>
+            Stores Website Files
+        </div>
+    </div>
+
+    <p>
+        A web browser requests a webpage from a web server.
+        The server processes the request and sends the required
+        webpage back to the browser.
+    </p>
+</section>
+
+<section>
+    <h2>6. Working Principle of a Website</h2>
+
+    <div class="diagram">
+        <div class="box">User enters URL</div>
+        <div class="arrow">→</div>
+        <div class="box">DNS finds IP</div>
+        <div class="arrow">→</div>
+        <div class="box">Server receives request</div>
+        <div class="arrow">→</div>
+        <div class="box">Server sends response</div>
+        <div class="arrow">→</div>
+        <div class="box">Browser displays page</div>
+    </div>
+</section>
+
+<section>
+    <h2>7. Client-Side vs Server-Side Scripting</h2>
+
+    <table>
+        <tr>
+            <th>Client-Side</th>
+            <th>Server-Side</th>
+        </tr>
+
+        <tr>
+            <td>Runs in the user's browser.</td>
+            <td>Runs on the web server.</td>
+        </tr>
+
+        <tr>
+            <td>Uses JavaScript mainly.</td>
+            <td>Can use PHP, Java, Python, Node.js etc.</td>
+        </tr>
+
+        <tr>
+            <td>Used for user interface and validation.</td>
+            <td>Used for databases and business logic.</td>
+        </tr>
+
+        <tr>
+            <td>Output is displayed directly in browser.</td>
+            <td>Server sends the processed result to browser.</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    Web Technology - Assignment I
+</footer>
+
+</body>
+</html>
